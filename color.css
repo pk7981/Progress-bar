@@ -1,0 +1,173 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family:system-ui, sans-serif;
+}
+.background{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.progressBar{
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.7);
+    gap: 10px;
+}
+.progressValue{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: conic-gradient(
+     rgb(168, 54, 214) 3.6deg, rgb(218, 208, 208) 0deg
+    );
+    
+}
+.progressValue::before{
+position: absolute;
+content: "";
+width: 180px;
+height: 180px;
+background-color: rgb(44, 171, 217);
+border-radius: 50%;
+box-shadow:rgb(195, 39, 39);
+}
+
+
+#progressPercent{
+    position: relative;
+    font-size: 40px;
+    font-weight: 600;
+    color: black;
+}
+.lineBar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px;
+}
+.progressLine{
+   width: 0%;
+    padding: 0px 10px;
+    font-weight: 400;
+    font-size: 20px;
+    background-color:rgb(230, 234, 16) ;
+    border: 2px solid violet;
+    border-radius: 50px;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+
+.text{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.text{
+    font-size: 30px;
+    font-weight: 600;
+    color: rgb(110, 108, 108);
+}
+
+.btn{
+outline: none;
+border: none;
+width: 40%;
+background-color:blue;
+color: white;
+padding:20px;
+font-size: 28px;
+font-weight: 500;
+border-radius: 15px;
+cursor: pointer;
+}
+
+.button{
+    outline: none;
+    border: none;
+    width: 40%;
+    background-color:blue;
+    color: white;
+    padding:20px;
+    font-size: 28px;
+    font-weight: 500;
+    border-radius: 15px;
+    cursor: pointer;
+    display: none; 
+}
+
+
+@media(max-width:700px){
+    
+.progressBar{
+        width: 400px;
+    height: 500px;
+    }
+    .progressValue{
+    
+        width: 180px;
+        height: 180px;
+    }
+
+    .progressValue::before{
+       
+        width: 160px;
+        height: 160px;
+    }
+    .button{
+        width:20%;
+        font-size: 20px;
+        font-weight: 400;
+    }
+    .btn{
+        
+        width: 40%;
+        font-size: 20px;
+    font-weight: 400;
+    }
+}
+@media(max-width:500px){
+    .progressBar{
+        width: 300px;
+    height: 500px;
+    }
+    .progressValue{
+    
+        width: 150px;
+        height: 150px;
+    }
+
+    .progressValue::before{
+       
+        width: 130px;
+        height: 130px;
+    }
+    .button{
+        width:30%;
+        padding: 2px;
+       
+    }
+    .btn{
+        
+        width: 30%;
+       padding: 2px;
+    }
+}
